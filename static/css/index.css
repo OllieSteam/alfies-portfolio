@@ -8,11 +8,11 @@ main{
 
 main h1{
     font-size: 40px;
-    margin-right: 5%;
+    margin-right: 7%;
     white-space: nowrap;
 }
 main h2:not(:last-child){
-    margin-right: 3%;
+    margin-right: 5%;
     white-space: nowrap;
 }
 
