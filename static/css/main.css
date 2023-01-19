@@ -27,6 +27,16 @@ main{
     margin-left: 150px;
 }
 
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+    supported by Chrome, Edge, Opera and Firefox */
+}
+
 #backdrop{
     max-width: 100vw;
     max-height: 100vh;
@@ -85,8 +95,14 @@ nav .bar{
     margin-bottom: 7px;
 }
 
+
 nav .bar:last-of-type{
     margin-bottom: 0px;
+}
+
+nav .bar-container:hover .bar{
+    background-color: #a9a9a9;
+    cursor: pointer;
 }
 
 nav #line{
@@ -98,6 +114,39 @@ nav #line{
 
 nav .menu-container.active{
     visibility: visible; 
+    animation: slidein 2s ease;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+        opacity: 0;
+    }
+    to {
+        margin-left: 0%;
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+nav .menu-container.slideout{
+    visibility: visible;
+    animation: slideout 2s ease;
+}
+
+@keyframes slideout {
+    from {
+        margin-left: 0%;
+        width: 100%;
+        opacity: 1;
+    }
+
+    to {
+        margin-left: 100%;
+        width: 300%;
+        opacity: 0;
+    }
 }
 
 nav .menu-container{
@@ -122,9 +171,13 @@ nav .menu-container ul:first-of-type{
 }
 
 nav .menu-container ul li{
-    text-decoration: underline;
     font-weight: bold;
     font-size: 20px;
     margin-bottom: 8px;
     white-space: nowrap;
+    cursor: pointer;
+}
+
+nav .menu-container ul li:hover{
+    text-decoration: underline;
 }

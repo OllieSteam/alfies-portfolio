@@ -1,5 +1,5 @@
 // Menu Manager
-localStorage.setItem('menuPos',1);//Session Storage to track if the menu is up or down.
+localStorage.setItem('menuPos',0);//Session Storage to track if the menu is up or down.
 
 /*
  * Menu Function - No @Params taken
@@ -11,10 +11,14 @@ localStorage.setItem('menuPos',1);//Session Storage to track if the menu is up o
 document.menu=function(){
     let navbar = document.getElementsByClassName('menu-container')
     if (navbar[0].classList.contains('active')){
-        navbar[0].classList.remove('active')
-        localStorage.setItem('menuPos',1);
-    }else{
-        navbar[0].classList.add('active')
+        navbar[0].classList.add('slideout');
+        navbar[0].classList.remove('active');
+        setTimeout(() => {
+            navbar[0].classList.remove('slideout');
+        }, 2000)
         localStorage.setItem('menuPos',0);
+    }else{
+        navbar[0].classList.add('active');
+        localStorage.setItem('menuPos',1);
     }
 }
