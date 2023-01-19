@@ -2,41 +2,89 @@
     --main-font-color: #ce0e1b;
 }
 
-html{
-    background-image: url(../img/index/Gradient_Fill_1.png);
-    height: 100%;;
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family:Arial, Helvetica, sans-serif
+h1,h2,h3,h4,h5,h6{
+    margin: 0px;
 }
 
 body{
-    margin: 0;
-    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    background: url(/static/img/Layer_1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    height: 100vh;
+    width: 100vw;
+}
+
+#backdrop{
+    max-width: 100vw;
+    max-height: 100vh;
+    margin-left: 80px;
+}
+
+nav{
+    height: 100vh;
+    width: 100px;
+    position: fixed;
+    z-index: 55;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    display: flex;
+}
+
+nav #nav-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-left: 40px;
+}
+
+nav h1, nav h3{
+    position: relative;
+    transform: rotate(180deg);
+    writing-mode:vertical-rl;
+    white-space: nowrap;
+    font-size: 22px;
+}
+
+nav h1{
+    margin-bottom: 30px;
+}
+nav h3{
+    margin-bottom: 30px;
+}
+
+nav .bar-container{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+nav .bar{
+    background-color: #000;
+    width: 30px;
+    height: 5px;
+    min-height: 5px;
+    margin-bottom: 7px;
+}
+
+nav .bar:last-of-type{
+    margin-bottom: 0px;
+}
+
+nav #line{
+    border-right: 1px solid black;
+    height: 100vh;
+    position: absolute;
+    padding-right: 130px;
 }
 
 main{
-
-}
-
-main .header{
-    
-}
-
-main .header h1{
-    color: var(--main-font-color);
-    padding-left: 20px;
-    margin-top: 5px;
-    font-size: 35.43pt;
-}
-
-main .image-container{
-    position: absolute;
-    left: 0;
-}
-
-main .image-container #welcome-image{
-    position: relative;
+    margin-left: 150px;
 }

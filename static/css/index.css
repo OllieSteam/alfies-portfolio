@@ -1,0 +1,32 @@
+main{
+    margin-right: 0px;
+    height: 80px;
+    width: 90vw;
+    display: flex;
+    align-items: center;
+}
+
+main h1{
+    font-size: 40px;
+    margin-right: 5%;
+    white-space: nowrap;
+}
+main h2:not(:last-child){
+    margin-right: 3%;
+    white-space: nowrap;
+}
+
+
+main .icons{
+    display: flex;
+    height: 50px;
+    width: 100px;
+    align-items: center;
+}
+main .icons a:first-of-type{
+    padding-right: 10px;
+}
+
+main .icons a img{
+    width: 100%;
+}
